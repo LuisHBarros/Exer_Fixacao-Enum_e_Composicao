@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        DateTimeFormatter brasilianDateTime = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter brazilianDateTime = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 
         System.out.println("Enter client data:");
@@ -24,7 +24,7 @@ public class Main {
         System.out.print("Email: ");
         String clientEmail = sc.nextLine();
         System.out.print("Birth date (DD/MM/YYYY): ");
-        LocalDate clientBirthDate = LocalDate.parse(sc.next(), brasilianDateTime);
+        LocalDate clientBirthDate = LocalDate.parse(sc.next(), brazilianDateTime);
         Client client = new Client(clientName, clientEmail, clientBirthDate);
 
 
